@@ -115,12 +115,26 @@ ul{list-style-type: none;}
             /* transition: filter 0.3s ease; */
             transition: all .3s ease;
         }
+        .projects .card-project:before{
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: rgba(0,0,0,.3);
+            left: 0;
+            top: 0;
+            transition: all .3s ease;
+        }
+        .projects .card-project:hover:before{
+            background: rgba(0,0,0,.1);
+        }
         .projects .card-project:hover{filter: grayscale(0%);background-size: auto 100%;}
             .projects .card-project .data{
                 background-color: rgba(0, 0, 0, 0.7);
                 border-radius: 0.5em;
                 padding: 12px 20px;
                 width: 100%;
+                
             }
             .projects .card-project h3{
                 color: var(--white);
@@ -128,7 +142,10 @@ ul{list-style-type: none;}
                 font-size: 1.1em;
                 font-weight: 600;
                 margin-bottom: 4px;
-            }    
+            }
+        
+        .projects .card-project-intro{width: 100%;height: 400px;margin-bottom: 4em;}
+            
 
 /* STUDIES */
 .studies-list{padding-left: 7em;}
