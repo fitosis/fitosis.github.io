@@ -25,7 +25,7 @@ body{
         content: "";
         position: absolute;
         width: 1px;
-        height: 285%;
+        height: 300%;
         background: var(--line-color);
         left: 3.25em;
         top: 0;
@@ -43,9 +43,18 @@ body{
             top: 12px;
         }
 
+.transition{transition: all .2s ease;}
 .relative{position: relative;}
 .mb-100{margin-bottom: 100px;}
-button{border-radius: 2em;background: var(--grey);padding: 10px 30px;color: var(--white);}
+button{border-radius: 2em;background: var(--orange);padding: 10px 46px 10px 30px;color: var(--white);position: relative;}
+button i{
+    position: absolute;
+    right: 20px;
+    top: 16px;
+    font-size: 14px;
+}
+.btn:hover button{padding: 10px 56px 10px 30px;}
+ul{list-style-type: none;}
 
 /* NAVBAR */
 .navbar-nav .nav-link{color: var(--black);}
@@ -95,9 +104,31 @@ button{border-radius: 2em;background: var(--grey);padding: 10px 30px;color: var(
         .projects .card-project{
             width: 34%;
             height: 270px;
-            background: no-repeat center / cover;
+            background: no-repeat center / auto 120%;
             border-radius: 1em;
+            overflow: hidden;
+            display: flex;
+            align-items: flex-end;
+            padding: 1.5em 2em;
+            text-decoration: none;
+            filter: grayscale(60%);
+            /* transition: filter 0.3s ease; */
+            transition: all .3s ease;
         }
+        .projects .card-project:hover{filter: grayscale(0%);background-size: auto 100%;}
+            .projects .card-project .data{
+                background-color: rgba(0, 0, 0, 0.7);
+                border-radius: 0.5em;
+                padding: 12px 20px;
+                width: 100%;
+            }
+            .projects .card-project h3{
+                color: var(--white);
+                backdrop-filter: blur(5px);
+                font-size: 1.1em;
+                font-weight: 600;
+                margin-bottom: 4px;
+            }    
 
 /* STUDIES */
 .studies-list{padding-left: 7em;}
@@ -107,11 +138,22 @@ button{border-radius: 2em;background: var(--grey);padding: 10px 30px;color: var(
     .studies-list .title-h4{font-size:0.625em;color: var(--grey);text-transform: uppercase;letter-spacing: 0.188em;}
     
 
-footer{background: var(--grey);}
-/* .logo, .logo-footer{
-    height: 30px;
-    width: auto;
-}
+footer{background: var(--grey);color: var(--white);}
+    footer ul{padding-left: 8em;}
+        footer li{margin-top: 4px;position: relative;}
+            footer li i{
+                position: absolute;
+                left: -26px;
+                top: 7px;
+            }
+    footer a{color: var(--white);text-decoration: none;}
+
+
+
+
+
+
+/* 
 
 @media only screen and (min-width: 767px) {
     .logo{
