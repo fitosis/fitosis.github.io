@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
 
 :root {
+    --white: #fff;
     --black: #000;
     --line-color: #D0D0D0;
     --orange: #EF6315;
     --orange-light: #f6d6cc;
+    --grey: #828080;
 }
   
 body{
@@ -23,18 +25,34 @@ body{
         content: "";
         position: absolute;
         width: 1px;
-        height: 100%;
+        height: 285%;
         background: var(--line-color);
         left: 3.25em;
         top: 0;
+        z-index: -1;
     }
 
+.title-h2{font-size: 1.2em;padding-left: 113px;position: relative;}
+        .title-h2:before{
+            content: "";
+            height: 1px;
+            width: 50px;
+            position: absolute;
+            left: 52px;
+            background: var(--line-color);
+            top: 12px;
+        }
+
 .relative{position: relative;}
+.mb-100{margin-bottom: 100px;}
+button{border-radius: 2em;background: var(--grey);padding: 10px 30px;color: var(--white);}
 
 /* NAVBAR */
 .navbar-nav .nav-link{color: var(--black);}
     .navbar-nav .nav-link.active, .navbar-nav .nav-link:hover{color: var(--orange);}
 .small-h1{font-size: 1.25em;}
+
+
 
 /* EXPERIENCE */
 .experience{position: relative;}
@@ -70,6 +88,26 @@ body{
         }
 
 
+ /* PROJECT */
+.projects{position: relative;}
+    .projects .cards{gap: 1%;}
+        
+        .projects .card-project{
+            width: 34%;
+            height: 270px;
+            background: no-repeat center / cover;
+            border-radius: 1em;
+        }
+
+/* STUDIES */
+.studies-list{padding-left: 7em;}
+    .studies-list h4{font-size: 1em;}
+    .studies-list h5{font-size:0.875em;font-weight: 100;}
+    .studies-list .date{font-size:0.75em;color: var(--grey);}
+    .studies-list .title-h4{font-size:0.625em;color: var(--grey);text-transform: uppercase;letter-spacing: 0.188em;}
+    
+
+footer{background: var(--grey);}
 /* .logo, .logo-footer{
     height: 30px;
     width: auto;
