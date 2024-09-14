@@ -32,6 +32,8 @@ body{
         z-index: -1;
     }
 
+    .pl-7em-intro:before{height: 108%;}    
+
 .title-h2{font-size: 1.2em;padding-left: 113px;position: relative;}
         .title-h2:before{
             content: "";
